@@ -1,5 +1,9 @@
-body {
-
+@font-face {
+    font-family: "general";
+src: url(assets/fonts/CandyCake.ttf), url(assets/fonts/CandyCake.eot), url(assets/fonts/CandyCake.otf);
+}
+*{
+    font-family: general,serif;
 }
 .grid-container{
 display: grid;
@@ -8,12 +12,13 @@ grid-template-rows: repeat(3, 3fr);
 }
 .grid-item{
     display: grid;
-    border: solid 2px gray;
-
-    
+    border: solid 2px #E2E2E2;
 }
 .user-container{
     display: grid;
+    border: solid 2px #E2E2E2;
+    border-right: none;
+
 }
 .searchbox{
     display: grid;
@@ -26,5 +31,19 @@ grid-template-rows: repeat(3, 3fr);
     opacity: 50%;
 }
 input:focus{
+
     outline: none;
+}
+input{
+    opacity: 70%;
+}
+.month-selector{
+    display: grid;
+    border: solid 3px #E2E2E2;
+}
+.user-color{
+    background-color: ;
+}
+h4{
+    margin: 0;
 }
