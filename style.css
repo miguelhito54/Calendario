@@ -1,0 +1,30 @@
+body {
+
+}
+.grid-container{
+display: grid;
+grid-template-columns: 23rem 3fr;
+grid-template-rows: repeat(3, 3fr);
+}
+.grid-item{
+    display: grid;
+    border: solid 2px gray;
+
+    
+}
+.user-container{
+    display: grid;
+}
+.searchbox{
+    display: grid;
+    margin: 20px;
+
+}
+.search{
+    position:absolute;
+    left:20rem;
+    opacity: 50%;
+}
+input:focus{
+    outline: none;
+}

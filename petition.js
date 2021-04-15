@@ -1,8 +1,4 @@
-const button = document.getElementById('button')
-
-button.addEventListener("click", () => {
-  
-  const BASE_URL = 'http://test.movilbox.co:888/test_mbox/test.php?metodo='
+const BASE_URL = 'http://test.movilbox.co:888/test_mbox/test.php?metodo='
   let xhr
   
   if(window.XMLHttpRequest)xhr = new XMLHttpRequest()
@@ -14,4 +10,3 @@ button.addEventListener("click", () => {
   })
   xhr.send()
   
-})
