@@ -3,23 +3,21 @@
 }
 .grid-container{
 display: grid;
-grid-template-columns: 23rem 3fr;
-grid-template-rows: repeat(3, 3fr);
+grid-template-columns: 24rem 2fr;
 }
-.grid-item{
-    display: grid;
+.calendar-section{
     border: solid 2px #E2E2E2;
 }
 .user-container{
-    display: grid;
     border: solid 2px #E2E2E2;
-    border-right: none;
-
+}
+.user-list{
+    display: grid;
+    grid-template-rows: 24rem 2fr;
 }
 .searchbox{
     display: grid;
     margin: 20px;
-
 }
 .search{
     position:absolute;
@@ -35,8 +33,15 @@ input{
     opacity: 70%;
 }
 
-.user-color{
-    
+.calendar-week{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-gap:10px;
+}
+.calendar__day{
+    text-align: center;
+    line-height: 2;
+
 }
 h3{
     color: #30424B;
@@ -47,6 +52,8 @@ h4{
     margin: 0;
 }
 .calendar{
+    border: solid 2px #E2E2E2;
+    display: grid;
     
     
 }
@@ -64,12 +71,15 @@ h4{
 }
 .prev{margin-right:auto;}
 .next{margin-left: auto;}
-
-.calendar-week{
-    display: grid;
-    grid-template-columns: repeat(7,1fr);
-    grid-gap: 10px;
-}
 .month, .year{
     padding: .5em 1em
+}
+.day-container{
+    display: grid;
+    border:solid 2px#9F9F9F;
+    grid-template-columns: repeat(7,1fr);
+}
+
+.draggable.dragging{
+    opacity:0.5%;
 }

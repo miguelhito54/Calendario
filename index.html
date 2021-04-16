@@ -4,32 +4,24 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css" >
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <title>Calendario</title>
   </head>
   <body>
     <div class="grid-container">    
-      <div class="grid-item">
-         <div class="searchbox">
+        <div class="calendar-section">
+            <div class="searchbox">
             <input placeholder="Buscar Usuarios" id="inputuser">
             <a  href='#'><span id='button'class="material-icons search">search</span></a> 
           </div>
-          <div class="user-list" id="res">
-            
-              <div class="user-color">
-
-              </div>
-          </div>
-         </div>
-      
+        </div>
       <div class="grid-item">
-          <div class="calendar">
+          <div>
             <div class="calendar-info">
-              <a href="#"><span class="material-icons prev"> arrow_back_ios </span></a>
-              <div class="calendar-month" id="month">febrero</div>
-              <div class="calendar-year" id ="year">2000</div>
-              <a href="#"><span class="material-icons next">arrow_forward_ios</span></a>
+              <a href="#" id="prev"><span class="material-icons prev"> arrow_back_ios </span></a>
+              <div class="calendar-month" id="month"></div>
+              <div class="calendar-year" id ="year"></div>
+              <a href="#"  id="next"><span class="material-icons next">arrow_forward_ios</span></a>
             </div>
             <div class="calendar-week">
               <div class="calendar__day">Domingo</div>
@@ -41,7 +33,12 @@
               <div class="calendar__day">Sabado</div>
             </div>
           </div>
-          </div>
+      </div>
+        <div class="user-list" id="res">
+            <div class="user-color">
+              </div> 
+        
+        </div>
       </div>
     </div>
   </body>
@@ -50,5 +47,9 @@
    <script src='search.js' type='text/javascript'>
   </script>
    <script src='usercolor.js' type='text/javascript'>
+  </script>
+   <script src='calendar.js' type='text/javascript'>
+  </script>
+  <script src='dragandrop.js' defer type='text/javascript'>
   </script>
 </html>
