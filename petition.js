@@ -8,20 +8,35 @@ const BASE_URL = 'http://test.movilbox.co:888/test_mbox/test.php?metodo='
   xhr.open('GET', BASE_URL + 'usuarios')
   xhr.addEventListener('load',(users) =>{
   data=JSON.parse(users.target.response)
-    for(let i of data){
-      res.innerHTML +=`
-        <div class='user-container'>
-          ${i.nombre}
-          <br>
-          ${i.perfil}
-          <h4>dias planificados</h4>
-           ${i.dias_plani}
-          <h4>tiendas planificadas</h4>
-           ${i.tiendas_plani}
-        </div>
-
-      `
+    
+  const inputuser = document.getElementById('inputuser')
+  const search = document.getElementById('button')
+      
+    const filtrar =()=>{
+      res.innerHTML = ''
+      const text = inputuser.value.toLowerCase();
+        for(let item of data){
+          let name = item.nombre.toLowerCase();
+          
+          if(name.indexOf(text) !== -1){
+              res.innerHTML += `
+              <div class='user-container'>
+               <h2>${item.nombre}</h2>
+               <h2>${item.perfil}<h2> 
+               <h2>dias planificados      ${item.dias_plani}</h2>
+               <h2>tiendas planificadas        ${item.tiendas_plani}</h2>
+              </div>
+            `
+          }
+        }
+        if(res.innerHTML === ''){
+          res.innerHTML +=`No se encontro la persona ...`
+        }
+      }
+      search.addEventListener('click', filtrar)
+      inputuser.addEventListener('keyup', filtrar)
     }
-  })
+)
   xhr.send()
   
+

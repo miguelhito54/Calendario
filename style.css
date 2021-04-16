@@ -1,9 +1,5 @@
-@font-face {
-    font-family: "general";
-src: url(assets/fonts/CandyCake.ttf), url(assets/fonts/CandyCake.eot), url(assets/fonts/CandyCake.otf);
-}
 *{
-    font-family: general,serif;
+    font-family: monospace;
 }
 .grid-container{
 display: grid;
@@ -27,7 +23,8 @@ grid-template-rows: repeat(3, 3fr);
 }
 .search{
     position:absolute;
-    left:20rem;
+    left:19rem;
+    top: 20px;
     opacity: 50%;
 }
 input:focus{
@@ -37,13 +34,18 @@ input:focus{
 input{
     opacity: 70%;
 }
-.month-selector{
+.calendar{
     display: grid;
-    border: solid 3px #E2E2E2;
+    
 }
 .user-color{
     
 }
+h3{
+    color: #30424B;
+    margin: 0;
+}
 h4{
+    color: #9F9F9F ;
     margin: 0;
 }
