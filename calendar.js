@@ -25,14 +25,10 @@ const writeMonth = (month) => {
             ${getTotalDays(monthNumber-1)-(i-1)}
         </div>`;
     }
-     for(let i=1; i<=getTotalDays(month); i++){
-        if(i===currentDay) {
-            dates.innerHTML += ` <div>${i}</div>`;
-        }else{
+     for(let i=1; i<31; i++){
             dates.innerHTML += ` <div>${i}</div>`;
         }
     }
-}
 
 const getTotalDays = (month) => {
     if(month === -1) month = 11;
