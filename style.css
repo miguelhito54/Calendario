@@ -37,9 +37,10 @@ input{
 
 .calendar-week{
     display: grid;
-    
-  
-    
+}
+.calendar-header{
+    display:grid;
+    grid-template-columns: auto;
 }
 .calendar-days{
     display: grid;
@@ -89,6 +90,7 @@ h4{
     display: grid;
     border:solid 2px#9F9F9F;
     grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(5,1fr);
 }
 
 .draggable.dragging{

@@ -31,6 +31,7 @@ const BASE_URL = 'http://test.movilbox.co:888/test_mbox/test.php?metodo='
           res.innerHTML +=`No se encontro la persona ...`
         }
       }
+      filtrar()
       inputuser.addEventListener('keyup', filtrar)
     }
 )

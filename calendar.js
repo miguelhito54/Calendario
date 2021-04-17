@@ -21,7 +21,7 @@ nextmonth.addEventListener('click', ()=>nextMonth());
 
 const writeMonth = (month) => {
    for(let i = startDay(); i>0;i--){
-        dates.innerHTML += ` <div class="calendar__date calendar__item calendar__last-days">
+        dates.innerHTML += ` <div>
             ${getTotalDays(monthNumber-1)-(i-1)}
         </div>`;
     }
